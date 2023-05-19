@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <title>Document</title>
+        <style>
+        </style>
+    </head>
+    <body style="background-color:white;" onload="generator();">
+        <div style="margin:40px; color:black; background-color:white; font-family:Arial;" width="40%" >
+            <H2>Ergun Equation Calculator</H2>
+            <img src="ergun-equation.png"></img>
+            <br>
+            <br>
+            <table style="width:30%">
+                <tr>
+                  <td><b>Particle Properties</b></th>
+                  <td></th>
+                </tr>
+                <tr>
+                  <td><label for="sphericity">Particle Sphericity</label></td>
+                  <td><input id="sphericity" type="numbers" value="1"></td>
+                </tr>
+                <tr>
+                  <td><label for="dp">Particle Diameter (mm)</label></td>
+                  <td><input id="dp" type="numbers" value="12.50"></td>
+                </tr>
+                <tr>
+                    <td><label for="e">Bed Porosity</label></th>
+                    <td><input id="e" type="numbers" value="0.38"></th>
+                </tr>
+                <tr>
+                    <td><label for="rho_p">Particle Density (kg/m<sup>3</sup>)</label></th>
+                    <td><input id="rho_p" type="numbers" value="1000"></th>
+                </tr>
+                <tr>
+                    <td><b>Gas Properties</b></th>
+                    <td></th>
+                </tr>
+                <tr>
+                    <td><label for="m">Gas Flowrate (kg/h)</label></th>
+                    <td><input id="m" type="numbers" value="3600"></th>
+                </tr>
+                <tr>
+                    <td><label for="rho_g">Gas Density (kg/m<sup>3</sup>)</label></th>
+                    <td><input id="rho_g" type="numbers" value="1.16"></th>
+                </tr>
+                <tr>
+                    <td><label for="mu_g">Gas Viscosity (cP)</label></th>
+                    <td><input id="mu_g" type="numbers" value="0.0182"></th>
+                </tr>
+                <tr>
+                    <td><b>Column Properties</b></th>
+                    <td></th>
+                </tr>
+                <tr>
+                    <td><label for="dc">Column Diameter (m)</label></th>
+                    <td><input id="dc" type="numbers" value="1.25"></th>
+                </tr>
+                <tr>
+                    <td><label for="L">Column Length (m)</label></th>
+                    <td><input id="L" type="numbers" value="2.50"></th>
+                </tr>
+              </table>
+            <br>
+            <br>
+            <button onclick='ergun()'>Submit</button>
+            <button onclick='reload()'>Reset</button>
+            <br>
+            <br>
+            <table style="width:30%">
+                <tr>
+                    <td><p>Volumetric gas flowrate:</p></th>
+                    <td id="vflow-output"></th>
+                </tr>
+                <tr>
+                    <td><p>Superficial gas velocity:</p></th>
+                    <td id="sflow-output"></th>
+                </tr>
+                <tr>
+                    <td><p>Pressure drop per m:</p></th>
+                    <td><p id="pdrop-output"></p></th>
+                </tr>
+                <tr>
+                    <td><p><b>Total Pressure Drop:</b></p></th>
+                    <td id="totalp-output"></th>
+                </tr>
+            </table>
+        </div>
+
+        <script src="script.js"></script>
+    </body>
+</html>
